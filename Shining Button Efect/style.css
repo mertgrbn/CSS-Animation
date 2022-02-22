@@ -1,0 +1,107 @@
+/* Overall CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: darkcyan;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Button CSS */
+.button{
+    margin-bottom: 10px;
+    font-size: 40px;
+    padding: 15px 40px;
+    border: none;
+    position: relative;
+    /* overflow: hidden; */
+    transition: all 0.3s;
+}
+
+.button:focus{
+    outline: none;
+}
+
+/* Shining Effect */
+.metal:before,
+.glass:before,
+.ruby:before,
+.neon:before{
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    transform-origin: left bottom;
+    transform: skew(30deg) translateX(-70px);
+    transition: all 0.3s;
+    opacity: 0.8;
+}
+
+.metal:hover:before,
+.glass:hover:before,
+.ruby:hover:before,
+.neon:hover:before{
+    transform: skew(30deg) translateX(320px);
+}
+
+/* Metal (Gold) */
+.metal{
+    background-color: #c4cace;
+    color: #5b6065;
+}
+
+.metal:hover{
+    background-color: #ffd700;
+    color: black;
+}
+
+/* Glass */
+.glass{
+    background-color: #b9f2ff;
+    color: #209db0;
+}
+
+
+.glass:hover{
+    background-color: #aa1359;
+}
+
+/* Ruby */
+.ruby{
+    background-color: #e0115f;
+    color: wheat;
+}
+
+.ruby:hover{
+    background-color: #0ae615;
+}
+
+/* Neon */
+.neon{
+    border: 4px solid #00b7ff;
+    background-color: #f8234d;
+    color: #74ee15;
+}
+
+.neon:before{
+    background-color: #74ee15;
+}
+.neon:hover{
+    border: 4px solid #ffd700;
+    color: #00d9ff;
+}
